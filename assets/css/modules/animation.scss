@@ -1,0 +1,33 @@
+@keyframes animacija{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes borderAnimation{
+    from{
+        width:0%;
+    }
+    to{
+        width:100%;
+    }
+}
+@keyframes project{
+    from{
+       
+        transform: rotateX(180deg);
+    }
+    to{
+        transform: rotateX(360deg);
+    }
+}
+@keyframes arrow{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

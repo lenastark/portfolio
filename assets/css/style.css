@@ -1,0 +1,772 @@
+@-webkit-keyframes animacija {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animacija {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes borderAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes borderAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes project {
+  from {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  to {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@keyframes project {
+  from {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  to {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@-webkit-keyframes arrow {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes arrow {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+nav, nav #links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header #heading h1 {
+  line-height: 1.5;
+  letter-spacing: 2xp;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10%;
+  background-color: red;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e1212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BF55EC;
+  border-radius: 10px;
+}
+
+h1, h2 {
+  color: #dbdbdb;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+span {
+  color: #BF55EC;
+  font-size: 2em;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1px;
+}
+
+p, label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+  color: #dbdbdb;
+}
+
+li {
+  list-style: none;
+}
+
+.tech ul {
+  padding-top: 20px;
+  font-size: 1.5em;
+  font-family: 'Ubuntu', sans-serif;
+  padding-left: 20px;
+}
+
+.tech ul li {
+  color: #dbdbdb;
+  list-style: circle;
+  padding: 10px 0px;
+}
+
+#animate {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  width: 80%;
+  left: 10%;
+  z-index: 101;
+  padding: 10px 0px;
+}
+
+nav #logo a {
+  -webkit-animation: animacija 3s ease;
+          animation: animacija 3s ease;
+}
+
+nav #logo a i {
+  padding-top: 25px;
+  font-size: 2em;
+  color: #dbdbdb;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+nav #logo a i:hover {
+  color: #BF55EC;
+}
+
+nav #links ul {
+  -webkit-animation: animacija 3s ease;
+          animation: animacija 3s ease;
+}
+
+nav #links ul li {
+  padding: 20px 10px;
+  font-size: 1.4em;
+}
+
+nav #links ul li a {
+  color: #dbdbdb;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+nav #links ul li a:link {
+  color: #dbdbdb;
+}
+
+nav #links ul li a:hover {
+  color: #BF55EC;
+}
+
+header, main, footer {
+  width: 60%;
+  margin: 0px auto;
+  -webkit-animation: animacija 3s ease;
+          animation: animacija 3s ease;
+}
+
+header {
+  height: 80vh;
+  position: relative;
+}
+
+header #heading {
+  position: absolute;
+  top: 55%;
+  left: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+header #heading h1, header #heading p {
+  color: #dbdbdb;
+}
+
+header #heading h1 {
+  font-size: 4em;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header #heading p {
+  font-size: 2em;
+  padding-bottom: 50px;
+}
+
+main #about {
+  position: absolute;
+  top: 80%;
+  width: 75%;
+}
+
+main #about #profileImg {
+  padding: 50px 0px;
+}
+
+main #about #profileImg img {
+  border-radius: 3px;
+}
+
+main #about #aboutText {
+  padding-bottom: 50px;
+  width: 50%;
+}
+
+main #about #aboutText p {
+  color: #dbdbdb;
+}
+
+main #work {
+  position: absolute;
+  top: 200%;
+}
+
+main #work .project {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+main #work .project:first-of-type {
+  margin-top: 50px;
+}
+
+main #work .project:last-of-type {
+  padding-top: 50px;
+}
+
+main #work .project .imgProject {
+  position: relative;
+}
+
+main #work .project .imgProject:hover {
+  -webkit-animation: project 1.3s ease;
+          animation: project 1.3s ease;
+}
+
+main #work .project .imgProject:hover img {
+  -webkit-transition: .7s;
+  transition: .7s;
+  opacity: 0;
+}
+
+main #work .project .imgProject:hover .linksProject {
+  display: block;
+}
+
+main #work .project .imgProject img {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+
+main #work .project .imgProject .linksProject {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: none;
+}
+
+main #work .project .imgProject .linksProject a {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  border: 2px solid #BF55EC;
+  color: #dbdbdb;
+  padding: 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  float: left;
+  width: 150px;
+  text-align: center;
+  border-radius: 40px;
+}
+
+main #work .project .imgProject .linksProject a:first-of-type {
+  margin-right: 25px;
+}
+
+main #work .project .imgProject .linksProject a:hover {
+  background-color: #763568;
+  border: 2px solid #763568;
+}
+
+main #work .project .projectText h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+main #contact {
+  color: #dbdbdb;
+  position: absolute;
+  top: 390%;
+  width: 60%;
+}
+
+main #contact .contactHead {
+  margin-top: 50px;
+}
+
+main #contact form {
+  width: 65%;
+  padding: 50px 0px;
+}
+
+main #contact form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main #contact form .input label {
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+main #contact form .input input {
+  height: 44px;
+  border: 0px;
+  margin-bottom: 20px;
+  background-color: #dbdbdb;
+  padding-left: 20px;
+  border-radius: 3px;
+}
+
+main #contact form .input input:focus {
+  outline-width: 0;
+  border: 3px solid #763568;
+  height: 38px;
+}
+
+main #contact form .input input[type="submit"] {
+  background-color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  color: #dbdbdb;
+  font-weight: 600;
+  height: 52px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+main #contact form .input input[type="submit"]:hover {
+  background: #763568;
+}
+
+main #contact form .input textarea {
+  resize: none;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  border-radius: 3px;
+}
+
+main #contact form .input textarea:focus {
+  outline-width: 0;
+}
+
+footer {
+  position: absolute;
+  top: 490%;
+  min-height: 10vh;
+  width: 60%;
+  left: 20%;
+  padding-bottom: 50px;
+}
+
+footer ul {
+  padding: 50px 0px;
+}
+
+footer ul li {
+  float: left;
+  margin-right: 20px;
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer ul li:hover .border {
+  height: 3px;
+  -webkit-animation: borderAnimation .7s ease;
+          animation: borderAnimation .7s ease;
+  background: #BF55EC;
+}
+
+footer ul li a {
+  color: #dbdbdb;
+  letter-spacing: 1px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+footer #arrow {
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  right: -18%;
+}
+
+footer #arrow:hover {
+  -webkit-animation: arrow .4s ease;
+          animation: arrow .4s ease;
+}
+
+footer #arrow a {
+  color: #dbdbdb;
+  font-size: 2em;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+footer #arrow a:hover {
+  color: #BF55EC;
+}
+
+@media screen and (max-width: 1536px) {
+  p {
+    font-size: 1.3em;
+  }
+  nav #links ul li {
+    font-size: 1.2em;
+  }
+  nav {
+    width: 90%;
+    left: 5%;
+  }
+  header #heading h1 {
+    font-size: 3.5em;
+  }
+  header #heading p {
+    font-size: 1.6em;
+  }
+  .tech ul {
+    font-size: 1.4em;
+  }
+  main #work .project .projectText h2 {
+    font-size: 2em;
+  }
+  main #work .project .imgProject .linksProject a {
+    font-size: 1.2em;
+    padding: 10px;
+    width: 100px;
+  }
+  main #work {
+    top: 210%;
+  }
+  main #contact {
+    top: 400%;
+  }
+  footer {
+    top: 510%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  p {
+    font-size: 1.2em;
+  }
+  header #heading h1 {
+    font-size: 3em;
+  }
+  header #heading p {
+    font-size: 1.5em;
+    width: 85%;
+  }
+  span {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  header #heading p {
+    font-size: 1.3em;
+    width: 85%;
+  }
+  main #work {
+    top: 240%;
+  }
+  main #contact {
+    top: 450%;
+  }
+  main #work .project .imgProject .linksProject {
+    width: 100%;
+    left: 75%;
+  }
+  main #contact form .input input {
+    height: 38px;
+  }
+  main #contact form .input textarea {
+    height: 120px;
+  }
+  main #contact form .input input[type="submit"] {
+    height: 40px;
+  }
+  footer {
+    top: 570%;
+  }
+  footer ul li a {
+    font-size: .7em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    width: 95%;
+    left: 0%;
+    padding: 10px 2.5%;
+    background-color: #0e1212;
+  }
+  nav #logo a i {
+    padding-top: 15px;
+  }
+  header {
+    height: 70vh;
+  }
+  header, main, footer {
+    width: 70%;
+  }
+  main #about {
+    top: 65%;
+  }
+  main #work {
+    top: 145%;
+  }
+  main #contact {
+    top: 260%;
+  }
+  main #about #aboutText {
+    width: 80%;
+  }
+  main #work .project {
+    width: 70%;
+  }
+  main #contact form {
+    width: 100%;
+  }
+  footer {
+    top: 330%;
+    left: 15%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main #about {
+    top: 65%;
+  }
+  main #work {
+    top: 175%;
+  }
+  main #contact {
+    top: 320%;
+  }
+  footer {
+    top: 410%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  nav #links ul li {
+    font-size: 1em;
+  }
+  header #heading h1 {
+    font-size: 2.5em;
+  }
+  header #heading p {
+    font-size: 1.1em;
+    width: 100%;
+  }
+  main #about #aboutText {
+    width: 100%;
+  }
+  main #work .project {
+    width: 80%;
+  }
+  #contact {
+    width: 80%;
+  }
+  main #about {
+    top: 70%;
+    width: 80%;
+  }
+  main #about #aboutText {
+    width: 80%;
+  }
+  main #about #profileImg img {
+    width: 80%;
+  }
+  main #work {
+    top: 230%;
+    width: 80%;
+  }
+  main #contact {
+    top: 430%;
+    width: 80%;
+  }
+  main #contact form {
+    width: 80%;
+  }
+  footer {
+    top: 550%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  p {
+    font-size: 1.05em;
+    line-height: 1.7;
+  }
+  main #contact {
+    top: 420%;
+  }
+  footer {
+    top: 540%;
+  }
+  footer ul li {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    height: 80vh;
+  }
+  header #heading h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 375px) and (max-height: 812px) {
+  main #about {
+    top: 75%;
+  }
+  main #work {
+    top: 215%;
+  }
+  main #contact {
+    top: 380%;
+  }
+  footer {
+    top: 490%;
+  }
+}
+
+@media screen and (max-width: 375px) and (max-height: 667px) {
+  main #about {
+    top: 80%;
+  }
+  main #work {
+    top: 245%;
+  }
+  main #contact {
+    top: 450%;
+  }
+  footer {
+    top: 580%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  nav #links ul li a {
+    letter-spacing: 0px;
+  }
+  main #work .project .imgProject .linksProject a {
+    font-size: 1em;
+  }
+  main #work .project .projectText h2 {
+    font-size: 1.5em;
+  }
+  footer ul li {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  nav #logo a i {
+    font-size: 1.2em;
+  }
+  header #heading {
+    top: 70%;
+  }
+  main #about {
+    top: 100%;
+  }
+  main #work {
+    top: 315%;
+  }
+  main #contact {
+    top: 540%;
+  }
+  footer {
+    top: 690%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

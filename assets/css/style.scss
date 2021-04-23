@@ -1,0 +1,719 @@
+
+@import 'modules/variables.scss';
+@import 'modules/animation.scss';
+@import 'modules/extend.scss';
+
+
+
+*{
+    padding:0px;
+    margin:0px;
+    // background-color: $dark;
+    scroll-behavior: smooth;
+}
+
+// scrollbar
+::-webkit-scrollbar {
+    width: 8px;
+    height:10%;
+    background-color: red;
+  }
+::-webkit-scrollbar-track {
+    background: $dark;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: $purple;
+    border-radius: 10px;
+}
+
+h1,h2{
+    color:$light;
+    font-family: 'Ubuntu', sans-serif;
+}
+span{
+    color: $purple;
+    font-size: 2em;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1px;
+    
+}
+p,label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6em;
+    color:$light;
+}
+li{
+    list-style: none;
+}
+.tech{
+    ul{
+       padding-top:20px;
+       font-size: 1.5em;
+       font-family: 'Ubuntu', sans-serif;
+       padding-left: 20px;
+       li{
+            color: $light;
+            list-style: circle;
+            padding:10px 0px;
+       }
+    }
+}
+#animate{
+    position:fixed;
+    width:100%;
+    height:100vh;
+}
+
+
+nav{
+    @extend %display-inline;
+    
+    position: fixed;
+    top:0px;
+    width: 80%;
+    left:10%;
+    z-index: 101;
+    padding: 10px 0px;
+
+    #logo{
+      
+        a{
+            animation:animacija 3s ease;
+            i{
+                padding-top:25px;
+                font-size: 2em;
+                color:$light;
+                transition: .3s;
+                &:hover{
+                    color:$purple;
+                }
+            }
+            
+        }
+    }
+    #links{
+        ul{
+            animation:animacija 3s ease;
+            @extend %display-inline;
+            li{
+                padding:20px 10px;
+                font-size: 1.4em;
+                a{
+                    color: $light;
+                    text-decoration: none;
+                    transition:.3s;
+                    font-family: 'Roboto', sans-serif;
+                    letter-spacing: 1px;
+                    &:link{
+                        color:$light;
+                    }
+                   &:hover{
+                       color:$purple;
+                   }
+                
+                }
+            }
+        }
+    }
+}
+header,main,footer{
+    width:60%;
+    margin:0px auto;
+    animation:animacija 3s ease
+}
+header{
+    
+    height: 80vh;
+    position: relative;
+    #heading{
+        position: absolute;
+        top:55%;
+        left:0%;
+        transform: translate(0%,-50%);
+        h1,p{
+            color:$light;
+        }
+        h1{
+            @extend %text-style;
+            font-size: 4em;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            
+        }
+        p{
+            font-size: 2em;
+            padding-bottom: 50px;
+        }
+    }
+}
+main{
+    
+    #about{
+        position: absolute;
+        top:80%;
+        width:75%;
+        #profileImg{
+            padding:50px 0px; 
+            img{
+                border-radius: 3px;
+            }
+        }
+        #aboutText{
+            padding-bottom: 50px;
+            width:50%;
+            p{
+                color: $light;
+            }
+           
+        }
+        
+    }
+    #work{
+        position: absolute;
+        top:200%;
+        // margin:0px 0px;
+        .project{   
+            width:100%;
+            margin-bottom: 50px;
+            &:first-of-type{
+                margin-top:50px;
+            }
+            &:last-of-type{
+                padding-top:50px;
+            }
+            .imgProject{
+                position: relative;
+               
+                &:hover{
+                    animation:project 1.3s ease;
+                    img{
+                        transition: .7s;
+                        opacity: 0;
+                        
+                    }
+                    .linksProject{
+                        display: block;
+                    }
+                }
+                
+                img{
+                    width: 100%;
+                    margin-bottom: 30px;
+                   border-radius: 3px;
+                  
+                }
+                .linksProject{
+                    position: absolute;
+                    
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%,-50%);
+                    transition: 1s;
+                    display: none;
+                    a{
+                        font-family: 'Open Sans', sans-serif;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-size: 1.4em;
+                        border:2px solid $purple;
+                        color:$light;
+                        padding:20px;
+                        transition: .3s;
+                        float: left;
+                        width: 150px;
+                        text-align: center;
+                        border-radius: 40px;
+                        &:first-of-type{
+                            margin-right: 25px;
+                        }
+                        &:hover{
+                            background-color: $purple-sumibt;
+                            border:2px solid $purple-sumibt;
+
+                        }
+                    }
+                }
+                
+              
+            }
+            .projectText{
+                h2{
+                    font-size: 2.2em;
+                    margin-bottom: 20px;
+                    letter-spacing: 1.5px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    #contact{
+  
+        color:$light;
+        position: absolute;
+        top:390%;
+        width: 60%;
+        .contactHead{
+            margin-top: 50px;
+        }
+        form{
+            width: 65%;
+            padding:50px 0px;
+            .input{
+                display: flex;
+                flex-direction: column;
+                label{
+                    padding-bottom: 10px;
+                    letter-spacing: 1px;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                }
+                input{
+                    height: 44px;
+                    border:0px;
+                    margin-bottom: 20px;
+                    background-color: $light;
+                    padding-left: 20px;
+                    border-radius: 3px;
+                    &:focus{
+                        outline-width: 0;
+                        border:3px solid $purple-sumibt;
+                        height: 38px;
+                    }
+                    &[type="submit"]{
+                        background-color: #000;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 1.3em;
+                        color: $light;
+                        font-weight: 600;
+                        height:52px;
+                        transition: .3s;
+                        font-size: 1em;
+                    text-transform: uppercase;
+                        &:hover{
+                            background: $purple-sumibt;
+                        }
+                    }
+                }
+                textarea{
+                    resize: none;
+                    margin-bottom: 20px;
+                    padding-top: 20px;
+                    padding-left: 20px;
+                    border-radius: 3px;
+                    &:focus{
+                        outline-width: 0;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+footer{
+    position: absolute;
+    top: 490%;
+    min-height: 10vh;
+    width: 60%;
+    left:20%;
+    padding-bottom: 50px;
+    ul{
+        padding:50px 0px;
+       li{
+           float: left;
+           margin-right: 20px;
+           font-size: 1.5em;
+           font-family: 'Open Sans', sans-serif;
+           &:hover{
+               .border{
+                    height:3px;
+                    animation:borderAnimation .7s ease;
+                    background:$purple;
+               }
+          
+           }
+           a{
+               color: $light;
+               letter-spacing: 1px;
+               transition: .3s;
+               text-decoration: none;
+               text-transform: uppercase;
+               font-size: .8em;
+           
+           }
+       }
+    }
+    #arrow{
+        display:block;
+        position: absolute;
+        bottom:50px;
+        right: -18%;
+        &:hover{
+            animation:arrow .4s ease;
+        }
+
+        a{
+            color: $light;
+            font-size: 2em;
+            transition:.3s;
+
+            &:hover{
+             
+                color:$purple;
+            }
+        
+        }
+    }
+}
+
+
+
+@media screen and (max-width:1536px){
+    
+    p{
+        font-size: 1.3em;
+    }
+    nav #links ul li {
+        
+        font-size: 1.2em;
+    }
+    nav {
+    
+        width: 90%;
+        left: 5%;
+ 
+    }
+    header #heading{
+        h1 {
+            font-size: 3.5em;
+        }
+        p {
+            font-size: 1.6em;
+          
+        }
+    } 
+    .tech ul {
+        font-size: 1.4em;
+    }
+    main #work .project .projectText h2 {
+        font-size: 2em;
+    }
+    main #work .project .imgProject .linksProject a {
+        font-size: 1.2em;
+        padding: 10px;
+        width: 100px;
+    }
+    main{
+        #work{
+            top:210%;
+        }
+        #contact{
+            top:400%;
+        }
+        
+    }
+    footer{
+        top:510%;
+    }
+   
+}
+@media screen and(max-width:1440px){
+    p{
+        font-size:1.2em;
+    }
+    header #heading h1 {
+        font-size: 3em;
+    }
+    header #heading p {
+        font-size: 1.5em;
+        width:85%;
+    }
+    span {
+       
+        font-size: 1.6em;
+
+    }
+   
+    
+    
+}
+@media screen and(max-width:1280px){
+    header #heading p {
+        font-size: 1.3em;
+        width: 85%;
+    }
+    main{
+      
+        #work{
+            top:240%;
+        }
+        #contact{
+            top:450%;
+        }
+        
+    }
+    main #work .project .imgProject .linksProject {
+        
+        width: 100%;
+        left:75%;
+    }
+    main #contact form .input input {
+        height: 38px;
+      
+    }
+    main #contact form .input textarea {
+       height: 120px;
+    }
+    main #contact form .input input[type="submit"] {
+        
+        height: 40px;
+       
+    }
+    footer{
+        top:570%;
+    }
+    footer ul li a {
+     
+        font-size: .7em;
+    }
+}
+@media screen and(max-width:1024px){
+    nav {
+    
+        width: 95%;
+        left:0%;
+        padding:10px 2.5%;
+        background-color: $dark;
+ 
+    }
+    nav #logo a i {
+        padding-top: 15px;
+    }
+    header{
+        height:70vh;
+    }
+    header, main,footer {
+        width: 70%;
+    }
+    main{
+      
+        #about{
+            top:65%;
+           
+        }
+        #work{
+            top:145%;
+        }
+        #contact{
+            top:260%;
+        }
+        
+    }
+    main #about #aboutText {
+      
+        width: 80%;
+    }
+    main #work .project {
+        width: 70%;
+     
+    }
+    main #contact form {
+    width: 100%;
+    
+    }
+    footer{
+        top:330%;
+        left: 15%;
+    }
+    
+}
+@media screen and(max-width:768px){
+    main{
+      
+        #about{
+            top:65%;
+           
+        }
+        #work{
+            top:175%;
+        }
+        #contact{
+            top:320%;
+        }
+        
+    }
+    footer{
+        top:410%;
+        
+    }
+}
+@media screen and(max-width:540px){
+    nav #links ul li {
+        font-size: 1em;
+    }
+    header #heading h1 {
+        font-size: 2.5em;
+    }
+    header #heading p {
+        font-size: 1.1em;
+        width:100%;
+    }
+    main #about #aboutText {
+        width: 100%;
+    }
+    main #work .project {
+        width: 80%;
+    }
+    #contact{
+        width: 80%;
+    }
+    main{
+      
+        #about{
+            top:70%;
+            width:80%;
+            #aboutText{
+                width:80%;
+            }
+            #profileImg{
+                img{
+                    width:80%;
+                }
+            }
+        }
+        #work{
+            top:230%;
+            width:80%
+        }
+        #contact{
+            top:430%;
+            width:80%;
+            form{
+                width: 80%;
+            }
+        }
+        
+    }
+    footer{
+        top:550%;
+        
+    }
+}
+@media screen and(max-width:414px){
+    p{
+        font-size: 1.05em;
+        line-height: 1.7;
+    }
+    main{
+        #contact{
+            top:420%;
+        }
+    }
+    footer{
+        top:540%;
+        ul{
+            li{
+                font-size:1.1em;
+            }
+        }
+    }
+}
+@media screen and(max-width:375px){
+    header{
+        height:80vh;
+    }
+    header #heading h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and(max-width:375px) and(max-height:812px){
+    main{
+      
+        #about{
+            top:75%;
+           
+        }
+        #work{
+            top:215%;
+        }
+        #contact{
+            top:380%;
+        }
+        
+    }
+    footer{
+        top:490%;
+        
+    }
+}
+@media screen and(max-width:375px) and(max-height:667px){
+    main{
+      
+        #about{
+            top:80%;
+           
+        }
+        #work{
+            top:245%;
+        }
+        #contact{
+            top:450%;
+        }
+        
+    }
+    footer{
+        top:580%;
+        
+    }
+}
+@media screen and(max-width:360px){
+    nav #links ul li a {
+       
+        letter-spacing: 0px; 
+    }
+    main #work .project .imgProject .linksProject a {
+        font-size: 1em;
+    
+    }
+    main #work .project .projectText h2 {
+        font-size: 1.5em;
+    }
+    footer ul li {
+        font-size: 1em;
+    }
+}
+@media screen and(max-width:320px){
+    nav #logo a i {
+        
+        font-size: 1.2em;
+    }
+    header{
+        #heading{
+            top:70%;
+        }
+       
+    }
+    main{
+      
+        #about{
+            top:100%;
+           
+        }
+        #work{
+            top:315%;
+        }
+        #contact{
+            top:540%;
+        }
+        
+    }
+    footer{
+        top:690%;
+        
+    }
+}
